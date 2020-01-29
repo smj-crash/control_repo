@@ -1,2 +1,2 @@
 # control_repo
-For messing with Puppet 6
+This is a temporary repository for messing around with Puppet 6.
