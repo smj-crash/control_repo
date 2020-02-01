@@ -5,7 +5,4 @@ node 'puppet2.crash.com' {
         owner => 'root',
         group => 'bin',
     }
-    file { '/root/README':
-        ensure => file,
-    }
 }
