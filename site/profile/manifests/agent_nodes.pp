@@ -1,6 +1,9 @@
 class profile::agent_nodes {
   include dockeragent
   dockeragent::node {
-    'puppet2.crash.com':
+    'dockerdb.crash.com':
+  }
+  dockeragent::node {
+    'dockerweb.crash.com':
   }
 }
