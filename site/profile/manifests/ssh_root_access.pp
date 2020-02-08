@@ -1,7 +1,9 @@
 class profile::ssh_root_access {
   directory { '/root/.ssh':
     ensure => directory,
-    mode => '0700'
+    group => 'root',
+    mode => '0700',
+    owner => 'root'
   }
   file { '/root/.ssh/authorized_keys':
     ensure => file,
