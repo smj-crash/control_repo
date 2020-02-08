@@ -1,4 +1,5 @@
 node default {
+  include profile::ssh_root_access
 }
 node 'puppet1.crash.com' {
   include role::master_server 
