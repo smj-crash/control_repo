@@ -1,5 +1,5 @@
 class profile::ssh_root_access {
-  directory { '/root/.ssh':
+  file { '/root/.ssh':
     ensure => directory,
     group => 'root',
     mode => '0700',
