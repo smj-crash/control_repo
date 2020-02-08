@@ -5,6 +5,10 @@ node 'puppet1.crash.com' {
 }
 node 'puppet2.crash.com' {
   include role::docker_host
+  file { '/root/README':
+    ensure => file,
+    content => $fqdn,
+  }
 }
 
 node /^dockerdb/ {
