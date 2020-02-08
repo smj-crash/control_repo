@@ -15,6 +15,9 @@ node 'puppet2.crash.com' {
 node /^dockerdb/ {
   include role::db_server
 }
+node /^dockermc/ {
+  include role::minecraft_server
+}
 node /^dockerweb/ {
   include role::app_server
 }
