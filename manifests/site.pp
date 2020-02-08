@@ -7,7 +7,7 @@ node 'puppet2.crash.com' {
   include role::docker_host
   file { '/root/README':
     ensure => file,
-    content => $fqdn,
+    content => "\n\n\t\tWelcome to ${fqdn}\n\n",
   }
 }
 
