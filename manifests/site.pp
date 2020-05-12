@@ -11,6 +11,9 @@ node 'puppet2.crash.com' {
     content => "\n\n\t\tWelcome to ${fqdn}\n\n",
   }
 }
+node 'puppet3.crash.com' {
+  include role::app_server
+}
 
 node /^dockerdb/ {
   include role::db_server
