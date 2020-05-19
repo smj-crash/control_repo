@@ -9,7 +9,9 @@ class profile::localmta {
     ensure => 'running',
   }
 
-  class { 'postfix::server':
+  include postfix::server
+  
+  postfix::server {
     myhostname => ${fqdn},
     mydomain => ${domain},
     inet_interfaces => 'localhost',
