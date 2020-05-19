@@ -19,3 +19,5 @@ class profile::localmta {
     message_size_limit => '10485760',
     submission => true,
   }
+
+}
