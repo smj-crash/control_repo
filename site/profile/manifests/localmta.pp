@@ -4,10 +4,10 @@ class profile::localmta {
 #    ensure => present,
 #  }
 
-  service { 'postfix':
-    enable => 'true',
-    ensure => 'running',
-  }
+#  service { 'postfix':
+#    enable => 'true',
+#    ensure => 'running',
+#  }
 
 #  include postfix::server
   
