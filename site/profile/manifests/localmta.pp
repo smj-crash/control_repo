@@ -1,8 +1,8 @@
 class profile::localmta {
 
-  package { 'postfix':
-    ensure => present,
-  }
+#  package { 'postfix':
+#    ensure => present,
+#  }
 
   service { 'postfix':
     enable => 'true',
