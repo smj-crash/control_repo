@@ -12,10 +12,11 @@ class profile::localmta {
 #  include postfix::server
   
   class { '::postfix::server':
-    myhostname => '${fqdn}',
-    mydomain => '${domain}',
+    myhostname => "${fqdn}",
+    mydomain => "${domain}",
     inet_interfaces => 'localhost',
     mydestination => 'segv.crash.com',
+    mailbox_size_limit => '51200000',
     message_size_limit => '10485760',
     submission => true,
   }
