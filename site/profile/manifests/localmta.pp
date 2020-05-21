@@ -9,10 +9,10 @@ class profile::localmta {
     ensure => 'running',
   }
 
-#  include postfix::server
+  include postfix::server
   
-  postfix::server {
-    myhostname => 'puppet3.crash.com',
+  class { '::postfix::server':
+    myhostname => '${fqdn}',
     mydomain => '${domain}',
     inet_interfaces => 'localhost',
     mydestination => 'segv.crash.com',
