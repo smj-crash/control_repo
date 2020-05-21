@@ -9,7 +9,7 @@ class profile::localmta {
     ensure => 'running',
   }
 
-  include postfix::server
+#  include postfix::server
   
   class { '::postfix::server':
     myhostname => '${fqdn}',
